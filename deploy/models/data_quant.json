@@ -1,0 +1,8 @@
+[
+  {"input":"Human: Please transcribe the audio.\nAssistant: ","target":"Sure, here is the transcription."},
+  {"input":"Human: Provide the speech-to-text result.\nAssistant: ","target":"Here is the transcript."},
+  {"input":"Human: Convert speech to text.\nAssistant: ","target":"Transcription complete."},
+  {"input":"Human: Output digits as 0123456789.\nAssistant: ","target":"Understood."},
+  {"input":"Human: Transcribe in English.\nAssistant: ","target":"Starting transcription."},
+  {"input":"Human: Transcribe in Chinese.\nAssistant: ","target":"Starting transcription."}
+]

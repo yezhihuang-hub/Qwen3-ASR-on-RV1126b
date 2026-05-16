@@ -1,0 +1,5 @@
+*.rkllm filter=lfs diff=lfs merge=lfs -text
+*.rknn filter=lfs diff=lfs merge=lfs -text
+*.npy filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
