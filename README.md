@@ -24,7 +24,28 @@
 3. 可选 VAD 语音活动检测
 4. 多语言/方言识别测试
 5. 运行耗时与 RTF 统计
+6. 录音结束后的 sherpa speaker finalizer 说话人贴标签
 ```
+
+新增 speaker finalizer V1 后处理链路：
+
+```text
+realtime mic ASR
+→ speaker-mode off，录音中只输出纯 ASR
+→ raw_mic_16k.wav + asr_committed_segments.json
+→ pyannote fp32 segmentation ONNX
+→ NeMo SpeakerNet embedding ONNX
+→ sherpa diarization / clustering
+→ Ye enrollment identification
+→ ASR overlap alignment
+→ final speaker-labeled transcript
+```
+
+入口文档：
+
+- `speaker_finalizer/README.md`
+- `docs/speaker_finalizer/speaker_finalizer_v1_technical_report.md`
+- `docs/speaker_finalizer/asr_first_post_record_finalizer_report.md`
 
 当前主链路采用：
 
